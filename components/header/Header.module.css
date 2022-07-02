@@ -78,7 +78,6 @@
 
     .cover_left h1 {
         bottom: 0;
-        font-size: 2rem;
         padding: calc(25vw - 1rem - 2px) 15% 0 15%;
         margin: 0;
         /* margin: calc(25vw - 1rem) 15%; */

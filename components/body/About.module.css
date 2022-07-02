@@ -23,7 +23,7 @@
 }
 
 .about_content ul {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 
@@ -41,10 +41,6 @@
         width: 200px;
         height: 200px;
     }
-
-    /* .about_content h2 {
-        font-size: 1.4rem;
-    } */
 
     .about_content ul {
         font-size: 1rem;
