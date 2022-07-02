@@ -1,0 +1,20 @@
+.list {
+    width: 100%;
+    /* background-color: rgba(255, 0, 0, 0.085); */
+    /* margin-top: 2rem; */
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+.list_title {
+    color: rgba(95, 69, 69);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+
