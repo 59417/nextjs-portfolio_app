@@ -2,6 +2,9 @@ import Image from 'next/image';
 import classes from './Header.module.css';
 
 export default function Header() {
+
+    const src = "https://next-app-content.s3.ap-northeast-1.amazonaws.com/portfolio-app/banner.JPG";
+
     return (
         <div className={classes.banner}>
             <div className={classes.cover_full}></div>
@@ -11,7 +14,11 @@ export default function Header() {
                 <p>HTML | CSS | JavaScript</p>
                 <div className={classes.banner_text}>Front-End | React | Next.js | HTML | CSS | JavaScript</div>
             </div>
-            <Image src="/banner.JPG" alt="banner" layout="fill" objectFit="cover" objectPosition="top" />
+            <Image 
+                // src="/banner.JPG" 
+                loader={() => src} src={src} alt="banner" 
+                unoptimized layout="fill" objectFit="cover" objectPosition="top" 
+            />
         </div>
     )
 }

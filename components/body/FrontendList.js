@@ -15,7 +15,7 @@ export default function FrontendList(props) {
                 {
                     FrontData.map(obj => {
                         return (
-                            <Card data={obj} key={obj.id} blank={true}/>
+                            <Card data={obj} key={obj.id} blank={false}/>
                         )
                     })
                 }

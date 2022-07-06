@@ -2,10 +2,15 @@ import Image from 'next/image';
 import classes from './About.module.css';
 
 export default function About() {
+    const src = "https://next-app-content.s3.ap-northeast-1.amazonaws.com/portfolio-app/headshot1.JPG";
     return (
         <div className={classes.about}>
             <div className={classes.headshot}>
-                <Image src="/headshot1.JPG" alt="banner" layout="fill" objectFit="cover" objectPosition="top" />
+                {/* <Image src="/headshot1.JPG" alt="banner" layout="fill" objectFit="cover" objectPosition="top" /> */}
+                <Image 
+                    loader={() => src} src={src} alt="headshot" 
+                    unoptimized layout="fill" objectFit="cover" objectPosition="top" 
+                />
             </div>
             <div className={classes.about_content}>
                 <h2>About Me</h2>
