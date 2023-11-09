@@ -9,10 +9,10 @@ export default function Header() {
       <div className={classes.cover_full}></div>
       <div className={classes.cover_left}>
         <h1>Portfolio</h1>
-        <p>Front-End | React | Next.js</p>
-        <p>HTML | CSS | JavaScript</p>
+        <p>React | Next.js | Node.js</p>
+        <p>Javascript | Database | AWS</p>
         <div className={classes.banner_text}>
-          Front-End | React | Next.js | HTML | CSS | JavaScript
+          React | Next.js | Node.js | Javascript | Database | AWS
         </div>
       </div>
       <Image

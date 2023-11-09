@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import classes from './Details.module.css'
-import { FrontDetails } from '../data'
+import { FrontDetails, BusinessDetails } from '../data'
 
 export default function Details(props) {
-  const { id, title, link } = { ...props.data }
-  const description = FrontDetails.find(obj => obj.id === id).description
+  const { id, title, link, mov } = { ...props.data }
+  const allData = [...BusinessDetails, ...FrontDetails]
+  const description = allData.find(obj => obj.id === id).description
+
   const no = parseInt(id.slice(-1))
-  const src = `/demo${id}.mp4`
+  const src = `/demo${id}.${mov ? `mov` : `mp4`}`
 
   return (
     <div className={classes.container}>
@@ -21,11 +23,10 @@ export default function Details(props) {
         <div className={classes.details_content}>
           <p>
             負責部分:&ensp;
-            {no !== 3
-              ? [5, 6].includes(no)
-                ? '邊看邊做'
-                : '一手包辦'
-              : '網頁維護'}
+            {['1-5', '1-6'].includes(id) && `邊看邊做`}
+            {['0-2', '1-1', '1-2', '1-4'].includes(id) && `一手包辦`}
+            {['1-3'].includes(id) && `網頁維護`}
+            {['0-1', '0-3'].includes(id) && `二手包辦`}
           </p>
           <p>小碎念:</p>
           <ul>
@@ -35,11 +36,11 @@ export default function Details(props) {
             <li>{description[3]}</li>
           </ul>
         </div>
-        <Link href={link} passHref>
+        {/* <Link href={link} passHref>
           <a target="_blank" rel="noopener noreferrer">
             <button className={classes.link}>點此前往</button>
           </a>
-        </Link>
+        </Link> */}
       </div>
     </div>
   )

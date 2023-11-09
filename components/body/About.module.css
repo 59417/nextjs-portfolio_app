@@ -1,66 +1,79 @@
 .about {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 3rem 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem 3rem;
 }
 
 .headshot {
-    position: relative;
-    width: 240px;
-    height: 240px;
-    border-radius: 120px;
-    overflow: hidden;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 120px;
+  overflow: hidden;
 }
 
 .about_content {
-    color: rgb(55, 55, 55);
+  color: rgb(55, 55, 55);
 }
 
 .about_content h2 {
-    color: rgba(95, 69, 69);
+  color: rgba(95, 69, 69);
 }
 
 .about_content ul {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
-
+.about_iframe {
+  width: 500px;
+  height: 300px;
+}
 
 @media (min-width: 1113px) {
-    .headshot {
-        width: 300px;
-        height: 300px;
-        border-radius: 150px;
-    }
+  .headshot {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+  }
 }
 
 @media (max-width: 1023px) {
-    .headshot {
-        width: 200px;
-        height: 200px;
-    }
+  .headshot {
+    width: 200px;
+    height: 200px;
+  }
 
-    .about_content ul {
-        font-size: 1rem;
-    }
+  .about_content ul {
+    font-size: 1rem;
+  }
+
+  .about_iframe {
+    width: 360px;
+    height: 210px;
+  }
 }
 
 @media (max-width: 768px) {
 }
 
 @media (max-width: 414px) {
-    .about {
-        display: block;
-        padding: 1rem;
-    }
+  .about {
+    display: block;
+    padding: 1rem;
+  }
 
-    .headshot {
-        margin: auto;
-    }
+  .headshot {
+    margin: auto;
+  }
 
-    .about_content ul {
-        padding-inline-start: 1rem;
-    }
+  .about_content ul {
+    padding-inline-start: 1rem;
+  }
+
+  .about_iframe {
+    width: 300px;
+    height: 560px;
+  }
 }
